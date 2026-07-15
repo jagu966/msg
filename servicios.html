@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSG - Servicios Especializados y Flota</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="text-4xl font-black tracking-tighter text-white">MSG</div>
+                <img src="assets/images/MSG_Blanco.webp" alt="" width="200"/>                </div>
+                    <span id="logo-fallback" class="hidden text-3xl font-display font-black tracking-tighter text-white">MSG<span class="text-emerald-500">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                    <a href="index.html" class="hover:text-white transition-colors duration-200 py-1">Inicio</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-200 py-1">Nosotros</a>
+                    <a href="servicios.html" class="text-emerald-400 font-bold border-b-2 border-emerald-500 py-1">Servicios</a>
+                    <a href="proyectos.html" class="hover:text-white transition-colors duration-200 py-1">Proyectos</a>
+                    <a href="seguridad.html" class="hover:text-white transition-colors duration-200 py-1">Seguridad</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-200 py-1">Contacto</a>
+                    <a href="bolsa.html" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-black px-4 py-2 rounded-lg transition-all duration-300">Bolsa de Trabajo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-zinc-400 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-zinc-300 hover:text-white">INICIO</a>
+            <a href="nosotros.html" class="block text-zinc-300 hover:text-white">NOSOTROS</a>
+            <a href="servicios.html" class="block text-emerald-400 font-bold">SERVICIOS</a>
+            <a href="proyectos.html" class="block text-zinc-300 hover:text-white">PROYECTOS</a>
+            <a href="seguridad.html" class="block text-zinc-300 hover:text-white">SEGURIDAD</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-white">CONTACTO</a>
+            <a href="bolsa.html" class="block text-emerald-400 font-semibold">BOLSA DE TRABAJO</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-36 pb-20 bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-6">
+                Catálogo Operativo
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white mb-6">
+                SERVICIOS <span class="text-emerald-400">ESPECIALIZADOS</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Mantenimiento integral, diagnóstico avanzado y suministro para la industria minera.
+            </p>
+        </div>
+    </header>
+
+    <!-- Core Services Grid -->
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">ESPECIALIDADES DE MANTENIMIENTO</h2>
+                <p class="text-zinc-400">Soluciones enfocadas en maximizar la disponibilidad mecánica y reducir tiempos muertos en mina.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-2xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Mantenimiento Preventivo</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Programas sistemáticos de revisión, cambios de fluidos, filtros y ajustes periódicos para garantizar el funcionamiento continuo y prolongar la vida útil de los equipos.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Inspección de puntos críticos</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Control de lubricación y filtrado</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-2xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Mantenimiento Correctivo</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Respuesta rápida y reparaciones mayores en taller o directamente en interior mina, solucionando fallas complejas con personal técnico altamente capacitado.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Reparación de motores diésel</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Reconstrucción de sistemas hidráulicos</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-2xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Predictivo y Diagnóstico</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Evaluación técnica con herramientas escáner de última generación, análisis de muestras y monitoreo para anticipar fallas catastróficas.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Diagnóstico electrónico en sitio</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Pruebas de presión y flujo hidráulico</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Coverage Section (Del PDF) -->
+    <section class="py-24 bg-zinc-900/40 border-y border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-2 block">Cultura de Versatilidad</span>
+                <h2 class="text-4xl font-display font-extrabold text-white mb-4">EQUIPO Y FLOTA ATENDIDA</h2>
+                <p class="text-zinc-400">Experiencia comprobada en las marcas e infraestructuras más exigentes del mercado minero.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Category 1: Equipos de Interior Mina -->
+                <div class="bg-zinc-950 border border-zinc-800 p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 text-emerald-400 text-8xl pointer-events-none">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-truck-monster text-emerald-400"></i> Maquinaria Pesada de Mina
+                    </h3>
+                    
+                    <ul class="space-y-4 text-zinc-300 text-sm">
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Cargadores de Bajo Perfil (LHD):</strong>
+                                Sandvik y Epiroc.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Jumbos y Amacizadores Mecanizados:</strong>
+                                Getman, Oldenburg y Paus.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Cargadores de Anfo (Anfoloaders):</strong>
+                                Normet (Especialistas en unidades Getman ANFO).
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Excavadoras y Retroexcavadoras:</strong>
+                                Caterpillar y marcas líderes del sector.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Pesados y Utilitarios -->
+                <div class="bg-zinc-950 border border-zinc-800 p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 text-emerald-400 text-8xl pointer-events-none">
+                        <i class="fa-solid fa-truck-moving"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-truck-front text-emerald-400"></i> Vehículos Pesados y Utilitarios
+                    </h3>
+                    
+                    <ul class="space-y-4 text-zinc-300 text-sm">
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Camiones Pesados Diésel:</strong>
+                                Kenworth (T800, T880, T380), International y Freightliner.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Equipos Especializados:</strong>
+                                Grúas (Hiab, Grove, Titan), Pipas de agua/combustible y Ambulancias.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/60">
+                            <i class="fa-solid fa-gear text-emerald-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Flotillas Utilitarias de Servicio:</strong>
+                                Toyota Hilux, Mitsubishi L200, Ford F-series y vehículos de personal.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Refacciones y Capacitacion (Del PDF) -->
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-3 block">Suministro Acreditado</span>
+                    <h2 class="text-4xl font-display font-extrabold text-white mb-6">VENTA E INSTALACIÓN DE REFACCIONES</h2>
+                    <p class="text-zinc-400 leading-relaxed mb-6">
+                        No solo diagnosticamos y reparamos, también suministramos refacciones originales y de alta durabilidad adaptadas a las exigencias severas del trabajo continuo en mina.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-xl border border-zinc-800">
+                            <div class="text-emerald-400 text-2xl"><i class="fa-solid fa-box-open"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Componentes de Alto Rendimiento</h4>
+                                <p class="text-zinc-400 text-xs">Piezas para motor, tren motriz, bombas hidráulicas y filtrado.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-xl border border-zinc-800">
+                            <div class="text-emerald-400 text-2xl"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Capacitación Continua CCIMASS</h4>
+                                <p class="text-zinc-400 text-xs">Personal capacitado bajo programas reconocidos por la Ley Federal del Trabajo (Art. 153-A).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-emerald-950/30 to-zinc-900 border border-emerald-500/30 p-8 rounded-3xl relative">
+                    <h3 class="text-2xl font-display font-bold text-white mb-4">¿Necesitas un diagnóstico o cotización urgente?</h3>
+                    <p class="text-zinc-300 text-sm mb-8">
+                        Contamos con capacidad de despliegue de cuadrillas especializadas para operar en tus instalaciones o interior mina.
+                    </p>
+                    <a href="contacto.html" class="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold px-8 py-4 rounded-xl text-sm inline-flex items-center gap-3 transition-all">
+                        SOLICITAR EVALUACIÓN TÉCNICA
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 MSG - Mantenimiento y Servicio a Equipo Minero García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

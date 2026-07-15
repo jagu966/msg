@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSG - Nosotros | Trayectoria Minera</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="text-4xl font-black tracking-tighter text-white">MSG</div>
+                <img src="assets/images/MSG_Blanco.webp" alt="" width="200"/>                </div>
+                    <span id="logo-fallback" class="hidden text-3xl font-display font-black tracking-tighter text-white">MSG<span class="text-emerald-500">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                    <a href="index.html" class="hover:text-white transition-colors duration-200 py-1">Inicio</a>
+                    <a href="nosotros.html" class="text-emerald-400 font-bold border-b-2 border-emerald-500 py-1">Nosotros</a>
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-200 py-1">Servicios</a>
+                    <a href="proyectos.html" class="hover:text-white transition-colors duration-200 py-1">Proyectos</a>
+                    <a href="seguridad.html" class="hover:text-white transition-colors duration-200 py-1">Seguridad</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-200 py-1">Contacto</a>
+                    <a href="bolsa.html" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-black px-4 py-2 rounded-lg transition-all duration-300">Bolsa de Trabajo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-zinc-400 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-zinc-300 hover:text-white">INICIO</a>
+            <a href="nosotros.html" class="block text-emerald-400 font-bold">NOSOTROS</a>
+            <a href="servicios.html" class="block text-zinc-300 hover:text-white">SERVICIOS</a>
+            <a href="proyectos.html" class="block text-zinc-300 hover:text-white">PROYECTOS</a>
+            <a href="seguridad.html" class="block text-zinc-300 hover:text-white">SEGURIDAD</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-white">CONTACTO</a>
+            <a href="bolsa.html" class="block text-emerald-400 font-semibold">BOLSA DE TRABAJO</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-36 pb-20 bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-6">
+                Conoce MSG
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white mb-6">
+                NUESTRA <span class="text-emerald-400">HISTORIA</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Mantenimiento y Servicio a Equipo Minero “García” (MSG)
+            </p>
+        </div>
+    </header>
+
+    <!-- Timeline / Historia -->
+    <section class="py-24 bg-zinc-950 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">EVOLUCIÓN Y CONSOLIDACIÓN</h2>
+                <p class="text-zinc-400">Un recorrido constante marcando la diferencia en operaciones subterráneas y de superficie.</p>
+            </div>
+
+            <!-- Vertical Timeline Line -->
+            <div class="relative border-l-2 border-emerald-500/30 ml-4 md:ml-32 space-y-12">
+                
+                <!-- Item 2020 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-zinc-950 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold">
+                        <i class="fa-solid fa-flag text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2020
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-2xl glow-hover">
+                        <h3 class="text-xl font-bold text-white mb-2">Fundación de MSG</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Fundada en agosto de 2020 para ofrecer soluciones técnicas especializadas en el mantenimiento de maquinaria pesada para el sector minero, con firme compromiso con la calidad, la seguridad y la eficiencia operativa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2021 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-zinc-950 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold">
+                        <i class="fa-solid fa-screwdriver-wrench text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2021
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-2xl glow-hover">
+                        <h3 class="text-xl font-bold text-white mb-2">Inicios en Minera Sabinas</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Prestación de servicios puntuales a equipos diésel en Minera Sabinas, posicionando a la empresa como una opción confiable y altamente técnica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2022 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-zinc-950 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold">
+                        <i class="fa-solid fa-file-contract text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2022
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-2xl glow-hover space-y-3">
+                        <h3 class="text-xl font-bold text-white">Grandes Alianzas e Interior Mina</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            • Primer contrato formal con <strong class="text-zinc-200">FRESNILLO PLC</strong> (Unidad La Ciénega) para mantenimiento total diésel en interior mina.<br>
+                            • Contrato con <strong class="text-zinc-200">Minera La Parreña</strong> (Milpillas) en cuadrillas de dos turnos para amacizadores mecanizados.<br>
+                            • Reparación especializada de unidades <strong class="text-zinc-200">GETMAN ANFO</strong> en Unidad Naica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2023 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-zinc-950 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold">
+                        <i class="fa-solid fa-chart-line text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2023
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-2xl glow-hover">
+                        <h3 class="text-xl font-bold text-white mb-2">Consolidación en Velardeña</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Tercer contrato formal con <strong class="text-zinc-200">Minera El Roble</strong> (Velardeña), reafirmando la confianza operativa y técnica en la región.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2025 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-zinc-950 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold">
+                        <i class="fa-solid fa-truck-monster text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2025
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-2xl glow-hover">
+                        <h3 class="text-xl font-bold text-white mb-2">Expansión de Flotillas en Zacatecas</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Adjudicación de dos contratos simultáneos con <strong class="text-zinc-200">Compañía Minera Sabinas</strong> (Sombrerete, Zacatecas) para mantenimiento preventivo y correctivo a camiones pesados y vehículos utilitarios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2026 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center text-zinc-950 text-xs font-bold animate-pulse">
+                        <i class="fa-solid fa-star text-[10px]"></i>
+                    </div>
+                    <div class="md:absolute md:-left-32 md:top-1.5 text-emerald-400 font-display font-extrabold text-2xl mb-2 md:mb-0">
+                        2026
+                    </div>
+                    <div class="bg-gradient-to-r from-emerald-950/40 to-zinc-900 border border-emerald-500/40 p-6 rounded-2xl glow-hover">
+                        <h3 class="text-xl font-bold text-white mb-2">Escala Operativa Superior</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Llegada a la Unidad La Ciénega de <strong class="text-emerald-400">Minera Mexicana La Ciénega</strong> (Santiago Papasquiaro, Durango) con un contrato de gran escala para inspección y mantenimiento especializado a flota diésel.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mision Section -->
+    <section class="py-20 bg-zinc-900/50 border-y border-zinc-800/80">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h2 class="text-4xl font-display font-extrabold text-white mb-8">NUESTRA MISIÓN</h2>
+            <div class="bg-zinc-950/80 p-8 md:p-12 rounded-3xl border border-zinc-800 shadow-2xl relative">
+                <p class="text-xl md:text-2xl font-light text-zinc-200 leading-relaxed italic">
+                    "Favorecer la disponibilidad mecánica y operativa de la maquinaria pesada de nuestros clientes mediante la prestación de servicios especializados de mantenimiento, reparación y diagnóstico técnico con altos estándares de calidad."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Politica Sustentable -->
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-display font-extrabold text-white mb-4">POLÍTICA SUSTENTABLE</h2>
+                <p class="text-zinc-400">Operaciones seguras, eficientes y respetuosas con el entorno.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-zinc-900/40 border border-zinc-800 p-8 rounded-2xl glow-hover">
+                    <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cuidado del Medio Ambiente</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Respeto absoluto por los ecosistemas donde operamos, minimizando el impacto ambiental en cada intervención.</p>
+                </div>
+
+                <div class="bg-zinc-900/40 border border-zinc-800 p-8 rounded-2xl glow-hover">
+                    <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Entorno Laboral Seguro</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Creación de procedimientos técnicos especializados enfocados en proteger la integridad física de nuestro personal.</p>
+                </div>
+
+                <div class="bg-zinc-900/40 border border-zinc-800 p-8 rounded-2xl glow-hover">
+                    <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-certificate"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cumplimiento Normativo</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Alineación estricta a las Normas Oficiales Mexicanas (NOM) aplicables al sector minero e industrial.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 MSG - Mantenimiento y Servicio a Equipo Minero García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

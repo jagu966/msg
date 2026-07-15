@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSG - Proyectos y Trayectoria</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="text-4xl font-black tracking-tighter text-white">MSG</div>
+                <img src="assets/images/MSG_Blanco.webp" alt="" width="200"/>                </div>
+                    <span id="logo-fallback" class="hidden text-3xl font-display font-black tracking-tighter text-white">MSG<span class="text-emerald-500">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                    <a href="index.html" class="hover:text-white transition-colors duration-200 py-1">Inicio</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-200 py-1">Nosotros</a>
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-200 py-1">Servicios</a>
+                    <a href="proyectos.html" class="text-emerald-400 font-bold border-b-2 border-emerald-500 py-1">Proyectos</a>
+                    <a href="seguridad.html" class="hover:text-white transition-colors duration-200 py-1">Seguridad</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-200 py-1">Contacto</a>
+                    <a href="bolsa.html" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-black px-4 py-2 rounded-lg transition-all duration-300">Bolsa de Trabajo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-zinc-400 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-zinc-300 hover:text-white">INICIO</a>
+            <a href="nosotros.html" class="block text-zinc-300 hover:text-white">NOSOTROS</a>
+            <a href="servicios.html" class="block text-zinc-300 hover:text-white">SERVICIOS</a>
+            <a href="proyectos.html" class="block text-emerald-400 font-bold">PROYECTOS</a>
+            <a href="seguridad.html" class="block text-zinc-300 hover:text-white">SEGURIDAD</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-white">CONTACTO</a>
+            <a href="bolsa.html" class="block text-emerald-400 font-semibold">BOLSA DE TRABAJO</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-36 pb-20 bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-6">
+                Portafolio de Trabajo
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white mb-6">
+                PROYECTOS Y <span class="text-emerald-400">CONTRATOS</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Trayectoria respaldada por las unidades mineras más exigentes de México.
+            </p>
+        </div>
+    </header>
+
+    <!-- Metrics Bar -->
+    <section class="py-12 bg-zinc-900/50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">6+</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Años de Trayectoria</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">100%</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Cumplimiento NOM</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">24/7</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Disponibilidad en Sitio</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">Multi-Marca</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Soporte Técnico</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">CONTRATOS Y OPERACIONES</h2>
+                <p class="text-zinc-400">Resumen de intervenciones clave en minería subterránea y de superficie.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: La Cienega 2026 -->
+                <div class="bg-zinc-900/60 border border-emerald-500/40 p-8 rounded-3xl glow-hover flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] uppercase font-bold px-3 py-1 rounded-full">
+                        Vigente 2026
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-mountain-sun"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Minera Mexicana La Ciénega</h3>
+                        <p class="text-xs text-emerald-400 font-semibold mb-4">Santiago Papasquiaro, Durango</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Contrato de gran escala para la inspección y mantenimiento integral a flota diésel. Diagnóstico preventivo y correctivo de alta velocidad.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Mantenimiento Diésel & Inspección de Flota Pesada
+                    </div>
+                </div>
+
+                <!-- Project 2: Sabinas 2025 -->
+                <div class="bg-zinc-900/60 border border-emerald-500/40 p-8 rounded-3xl glow-hover flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] uppercase font-bold px-3 py-1 rounded-full">
+                        Vigente 2025 - Presente
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-truck-monster"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Compañía Minera Sabinas</h3>
+                        <p class="text-xs text-emerald-400 font-semibold mb-4">Sombrerete, Zacatecas</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Adjudicación de dos contratos simultáneos enfocados en el mantenimiento preventivo y correctivo para camiones pesados y flota de utilitarios.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Camiones Kenworth/International & Utilitarios
+                    </div>
+                </div>
+
+                <!-- Project 3: La Parreña (ACTUALIZADO A VIGENTE) -->
+                <div class="bg-zinc-900/60 border border-emerald-500/40 p-8 rounded-3xl glow-hover flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] uppercase font-bold px-3 py-1 rounded-full">
+                        Vigente 2022 - Presente
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Minera La Parreña</h3>
+                        <p class="text-xs text-emerald-400 font-semibold mb-4">Unidad Milpillas</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Despliegue continuo de cuadrillas de trabajo en dos turnos operacionales para dar soporte especializado a amacizadores mecanizados.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Cuadrillas Permanentes para Amacizadores Mecanizados
+                    </div>
+                </div>
+
+                <!-- Project 4: El Roble 2023 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-3xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Minera El Roble</h3>
+                        <p class="text-xs text-zinc-500 font-semibold mb-4">Velardeña, Durango (2023)</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Tercer contrato formal consolidado. Programas intensivos de soporte para la disponibilidad mecánica continua en la unidad.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Mantenimiento General de Maquinaria
+                    </div>
+                </div>
+
+                <!-- Project 5: Fresnillo PLC 2022 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-3xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-dungeon"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Fresnillo PLC</h3>
+                        <p class="text-xs text-zinc-500 font-semibold mb-4">Unidad La Ciénega (2022)</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Primer contrato formal relevante para la atención total de equipos diésel operando en interior mina bajo condiciones de alto desgaste.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Mantenimiento Diésel en Interior Mina
+                    </div>
+                </div>
+
+                <!-- Project 6: Naica 2022 -->
+                <div class="bg-zinc-900/60 border border-zinc-800 p-8 rounded-3xl glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-1">Unidad Naica</h3>
+                        <p class="text-xs text-zinc-500 font-semibold mb-4">Chihuahua (2022)</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Intervención y reparación especializada a dos unidades GETMAN ANFO para asegurar su efectividad en campo.
+                        </p>
+                    </div>
+                    <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400">
+                        <strong class="text-white block mb-1">Alcance:</strong> Reparación de Unidades Especiales GETMAN
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 MSG - Mantenimiento y Servicio a Equipo Minero García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

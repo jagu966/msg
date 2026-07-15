@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSG - Bolsa de Trabajo</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="text-4xl font-black tracking-tighter text-white">MSG</div>
+                <img src="assets/images/MSG_Blanco.webp" alt="" width="200"/>                </div>
+                    <span id="logo-fallback" class="hidden text-3xl font-display font-black tracking-tighter text-white">MSG<span class="text-emerald-500">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                    <a href="index.html" class="hover:text-white transition-colors duration-200 py-1">Inicio</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-200 py-1">Nosotros</a>
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-200 py-1">Servicios</a>
+                    <a href="proyectos.html" class="hover:text-white transition-colors duration-200 py-1">Proyectos</a>
+                    <a href="seguridad.html" class="hover:text-white transition-colors duration-200 py-1">Seguridad</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-200 py-1">Contacto</a>
+                    <a href="bolsa.html" class="text-emerald-400 font-bold border-b-2 border-emerald-500 py-1">Bolsa de Trabajo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-zinc-400 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-zinc-300 hover:text-white">INICIO</a>
+            <a href="nosotros.html" class="block text-zinc-300 hover:text-white">NOSOTROS</a>
+            <a href="servicios.html" class="block text-zinc-300 hover:text-white">SERVICIOS</a>
+            <a href="proyectos.html" class="block text-zinc-300 hover:text-white">PROYECTOS</a>
+            <a href="seguridad.html" class="block text-zinc-300 hover:text-white">SEGURIDAD</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-white">CONTACTO</a>
+            <a href="bolsa.html" class="block text-emerald-400 font-bold">BOLSA DE TRABAJO</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-36 pb-20 bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-6">
+                <i class="fa-solid fa-user-plus"></i> Talento Minero
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white mb-6">
+                ÚNETE AL <span class="text-emerald-400">EQUIPO MSG</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Buscamos personal capacitado y comprometido con la excelencia operativa y la seguridad en minería subterránea.
+            </p>
+        </div>
+    </header>
+
+    <!-- Vacancies Section -->
+    <section class="py-16 bg-zinc-900/40 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-2">POSICIONES MÁS SOLICITADAS</h2>
+                <p class="text-zinc-400 text-sm">Buscamos perfiles para proyectos en Mina Subterránea y Superficie.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Vacancy 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">Operación en Sitio</div>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Mecánico Diésel Pesado</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+                            Experiencia en overhaul y diagnóstico de motores Caterpillar, Cummins o Detroit en scoops y jumbos.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center text-xs text-zinc-500"><i class="fa-solid fa-clock mr-2 text-emerald-500"></i> Turnos Rotativos / Campamento</span>
+                </div>
+
+                <!-- Vacancy 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">Técnico Especialista</div>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Técnico Hidráulico / Eléctrico</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+                            Especialista en lecturas de diagramas, bombas de pistones y sistemas electrohidráulicos para equipo pesado.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center text-xs text-zinc-500"><i class="fa-solid fa-clock mr-2 text-emerald-500"></i> Turnos Rotativos / Campamento</span>
+                </div>
+
+                <!-- Vacancy 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2">Seguridad e Higiene</div>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Supervisor de Campo SST</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+                            Encargado de verificar protocolos de seguridad NOM-STPS en mina interior y coordinación de APR/AST.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center text-xs text-zinc-500"><i class="fa-solid fa-clock mr-2 text-emerald-500"></i> Turnos Rotativos / Campamento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="py-20 bg-zinc-950">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-zinc-900/70 border border-zinc-800 p-8 md:p-12 rounded-3xl glow-hover shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-display font-bold text-white mb-3">POSTULA TU CANDIDATURA</h2>
+                    <p class="text-zinc-400 text-sm">Completa el formulario y adjunta tus datos para ser considerado en nuestras vacantes.</p>
+                </div>
+
+                <form action="https://formspree.io/f/mvzegvvq" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">Nombre Completo *</label>
+                            <input type="text" name="nombre" required placeholder="Ej. Juan Pérez García" 
+                                   class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">Correo Electrónico *</label>
+                            <input type="email" name="email" required placeholder="correo@ejemplo.com" 
+                                   class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">Teléfono / WhatsApp *</label>
+                            <input type="tel" name="telefono" required placeholder="+52 (871) 000-0000" 
+                                   class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">Puesto de Interés *</label>
+                            <select name="puesto" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all text-sm">
+                                <option value="" class="bg-zinc-900">Selecciona una opción</option>
+                                <option value="Mecánico Diesel" class="bg-zinc-900">Mecánico Diésel Pesado</option>
+                                <option value="Técnico Hidráulico/Eléctrico" class="bg-zinc-900">Técnico Hidráulico / Eléctrico</option>
+                                <option value="Supervisor SST" class="bg-zinc-900">Supervisor de Campo SST</option>
+                                <option value="Ayudante General" class="bg-zinc-900">Ayudante General de Mantenimiento</option>
+                                <option value="Otro" class="bg-zinc-900">Otro Puesto Técnico</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-semibold mb-2">Resumen de Experiencia y Equipos que Manejas</label>
+                        <textarea name="mensaje" rows="5" placeholder="Platícanos sobre tu experiencia previa en mina, marcas de equipo (Sandvik, Epiroc, CAT) o certificaciones DC-3 con las que cuentas..." 
+                                  class="w-full bg-zinc-950 border border-zinc-800 rounded-2xl px-5 py-3.5 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all text-sm resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-black py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <span>Enviar Solicitud</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                    <p class="text-center text-xs text-zinc-500 mt-4">
+                        <i class="fa-solid fa-lock text-emerald-500/80 mr-1"></i> Tu información será tratada de manera confidencial por nuestro departamento de Recursos Humanos.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 MSG - Mantenimiento y Servicio a Equipo Minero García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
