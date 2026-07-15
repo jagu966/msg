@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSG - Seguridad y Sostenibilidad</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="text-4xl font-black tracking-tighter text-white">MSG</div>
+                <img src="assets/images/MSG_Blanco.webp" alt="" width="200"/>                </div>
+                    <span id="logo-fallback" class="hidden text-3xl font-display font-black tracking-tighter text-white">MSG<span class="text-emerald-500">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                    <a href="index.html" class="hover:text-white transition-colors duration-200 py-1">Inicio</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-200 py-1">Nosotros</a>
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-200 py-1">Servicios</a>
+                    <a href="proyectos.html" class="hover:text-white transition-colors duration-200 py-1">Proyectos</a>
+                    <a href="seguridad.html" class="text-emerald-400 font-bold border-b-2 border-emerald-500 py-1">Seguridad</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-200 py-1">Contacto</a>
+                    <a href="bolsa.html" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-black px-4 py-2 rounded-lg transition-all duration-300">Bolsa de Trabajo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-zinc-400 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-zinc-300 hover:text-white">INICIO</a>
+            <a href="nosotros.html" class="block text-zinc-300 hover:text-white">NOSOTROS</a>
+            <a href="servicios.html" class="block text-zinc-300 hover:text-white">SERVICIOS</a>
+            <a href="proyectos.html" class="block text-zinc-300 hover:text-white">PROYECTOS</a>
+            <a href="seguridad.html" class="block text-emerald-400 font-bold">SEGURIDAD</a>
+            <a href="contacto.html" class="block text-zinc-300 hover:text-white">CONTACTO</a>
+            <a href="bolsa.html" class="block text-emerald-400 font-semibold">BOLSA DE TRABAJO</a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="pt-36 pb-20 bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-[0.25em] mb-6">
+                <i class="fa-solid fa-shield-halved"></i> Compromiso Integral
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-white mb-6">
+                SEGURIDAD Y <span class="text-emerald-400">SOSTENIBILIDAD</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto font-light leading-relaxed">
+                Priorizamos la vida, la salud operacional y la preservación ambiental en cada maniobra dentro y fuera de mina.
+            </p>
+        </div>
+    </header>
+
+    <!-- Stat Highlights -->
+    <section class="py-12 bg-zinc-900/50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="p-4">
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">0</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Accidentes Fatalidades Objetivo</p>
+            </div>
+            <div class="p-4">
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">100%</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Cumplimiento con NOM-STPS</p>
+            </div>
+            <div class="p-4">
+                <p class="text-3xl md:text-4xl font-display font-black text-emerald-400">24/7</p>
+                <p class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mt-1">Supervisión en Campo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Policy Main Card -->
+    <section class="py-20 bg-zinc-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-3">POLÍTICA SUSTENTABLE</h2>
+                <p class="text-zinc-400 text-sm">Nuestra filosofía rectora en cada centro de trabajo.</p>
+            </div>
+            
+            <div class="bg-zinc-900/80 p-8 md:p-12 rounded-3xl border border-emerald-500/30 text-base md:text-lg leading-relaxed shadow-2xl relative">
+                <div class="absolute -top-5 -right-5 text-emerald-500/10 text-9xl font-display font-black select-none pointer-events-none">MSG</div>
+                
+                <p class="mb-6 text-zinc-300">
+                    En <span class="text-emerald-400 font-bold">MSG (Mantenimiento y Servicio a Equipo Minero García)</span> nos comprometemos a ejecutar operaciones de mantenimiento mecánico y diagnóstico diésel que sean rigurosamente <strong class="text-white">seguras, eficientes y respetuosas del medio ambiente</strong>, minimizando el impacto en los ecosistemas locales.
+                </p>
+                <p class="mb-6 text-zinc-300">
+                    Fundamentamos nuestra labor en la garantía de un entorno laboral sano y estable, respaldado por procedimientos técnicos normalizados que responden puntualmente a las <strong class="text-white">Normas Oficiales Mexicanas</strong> y los estándares de seguridad exigidos por las compañías mineras más estrictas de México.
+                </p>
+                <p class="text-zinc-300">
+                    Valoramos la confianza depositada por nuestros clientes. Por ello, actuamos como aliados estratégicos que impulsan la productividad sin comprometer en ningún momento el bienestar físico del personal ni la <strong class="text-emerald-400">sostenibilidad a largo plazo</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Commitments Grid -->
+    <section class="py-20 bg-zinc-900/60 border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">NUESTROS PILARES DE SEGURIDAD</h2>
+                <p class="text-zinc-400">Estrategias operativas diseñadas para mitigar riesgos en entornos de alto impacto.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl glow-hover">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 text-3xl">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">Seguridad Laboral e Integridad</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        Evaluación continua de riesgos antes de iniciar cualquier mantenimiento. Protocolos rigurosos de Bloqueo y Etiquetado (LOTO) e inspección periódica de EPP específico para mina interior y superficie.
+                    </p>
+                    <ul class="text-xs text-emerald-400/80 space-y-2">
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Análisis de Riesgo por Tarea (AST)</li>
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Capacitación continua a técnicos</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl glow-hover">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 text-3xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">Protección Medioambiental</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        Manejo responsable de lubricantes, filtros y fluidos industriales. Prevenimos la contaminación de suelos y mantos acuíferos mediante recipientes herméticos y kits antiderrames certificados.
+                    </p>
+                    <ul class="text-xs text-emerald-400/80 space-y-2">
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Reciclaje y contención de aceites</li>
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Reducción de huella ecológica</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl glow-hover">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 text-3xl">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">Alineación Normativa STPS</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        Adherencia cabal a las directrices vigentes expedidas por la STPS y la SEMARNAT para trabajos de alto riesgo en minería subterránea y manejo de maquinaria pesada.
+                    </p>
+                    <ul class="text-xs text-emerald-400/80 space-y-2">
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>NOM-023-STPS (Trabajos en Minas)</li>
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>NOM-004-STPS (Sistemas de Protección)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section class="py-20 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-gradient-to-r from-emerald-950/40 via-zinc-900 to-zinc-900 border border-emerald-500/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="space-y-4 max-w-2xl">
+                    <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Cultura de Prevención</span>
+                    <h3 class="text-3xl font-display font-bold text-white">¿Buscas un socio operativamente seguro en tu unidad minera?</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Nuestro personal cuenta con las acreditaciones y pases de seguridad requeridos por las mineras más exigentes de México.
+                    </p>
+                </div>
+                <a href="contacto.html" class="inline-flex items-center gap-3 bg-emerald-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-emerald-400 transition-all duration-300 whitespace-nowrap">
+                    <span>Contactar a Seguridad</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 MSG - Mantenimiento y Servicio a Equipo Minero García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
